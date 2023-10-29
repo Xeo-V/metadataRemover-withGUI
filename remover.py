@@ -5,3 +5,4 @@ from PIL import Image, ExifTags
 import datetime
 import os
 
+class MainWindow(QMainWindow):
