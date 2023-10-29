@@ -9,7 +9,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.init_ui()
-
+    
     def init_ui(self):
         self.setWindowTitle('Metadata Cleaner')
         self.setGeometry(300, 300, 400, 300)
@@ -81,3 +81,8 @@ class MainWindow(QMainWindow):
                     QMessageBox.information(self, 'Success', f'Metadata cleared successfully! Saved as {save_path}')
         except Exception as e:
             QMessageBox.warning(self, 'Error', str(e))
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    main_win = MainWindow()
+    sys.exit(app.exec_())
